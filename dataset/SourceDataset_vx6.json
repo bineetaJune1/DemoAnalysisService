@@ -2,7 +2,7 @@
 	"name": "SourceDataset_vx6",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureSqlDatabase1",
+			"referenceName": "SQLToBlob",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
