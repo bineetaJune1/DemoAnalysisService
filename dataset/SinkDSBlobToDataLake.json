@@ -1,0 +1,76 @@
+{
+	"name": "SinkDSBlobToDataLake",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SinkLSBolbToDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureDataLakeStoreLocation",
+				"folderPath": "DataFromBlob"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"Currency Type": {
+					"type": "null"
+				},
+				"Engagement": {
+					"type": "string"
+				},
+				"Engagement_Description": {
+					"type": "string"
+				},
+				"Engagement_Manager": {
+					"type": "string"
+				},
+				"Engagement_Manager_Name": {
+					"type": "string"
+				},
+				"Engagement_Partner": {
+					"type": "string"
+				},
+				"Engagement_Partner_Name": {
+					"type": "string"
+				},
+				"Engagement_Profit_Center": {
+					"type": "string"
+				},
+				"Engagement_Responsible_Person_Job_Level_Global": {
+					"type": "string"
+				},
+				"Fiscal_Year_Period": {
+					"type": "string"
+				},
+				"Office": {
+					"type": "string"
+				},
+				"Current_Inputs_Rolling12mths_Ltcp": {
+					"type": "null"
+				},
+				"Eng_Age_Kpi": {
+					"type": "string"
+				},
+				"Inputs_Over365days_LTP": {
+					"type": "string"
+				},
+				"Lockup_Days_Without_Tax_Ltcp": {
+					"type": "string"
+				},
+				"Net_Investment_With_Tax_Ltcp": {
+					"type": "string"
+				},
+				"Unbilled_WIP_Ltcp": {
+					"type": "string"
+				},
+				"ID": {
+					"type": "integer"
+				}
+			}
+		}
+	}
+}
