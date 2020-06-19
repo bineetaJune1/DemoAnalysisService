@@ -1,5 +1,5 @@
 {
-	"name": "SourceDSSQLToBlob",
+	"name": "SourceDSSQLToBlob_wip",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SourceDSSQLToBlob_wip",
