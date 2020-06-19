@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "SQLToBlob",
+				"name": "SQLToBlob_Lockup",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -57,7 +57,13 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "SQLToBlob",
+						"activity": "SQLToBlob_Lockup",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "SQLToBlob_wip",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -103,6 +109,56 @@
 				"outputs": [
 					{
 						"referenceName": "SinkDSBlobToDataLake",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "SQLToBlob_wip",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "dbo.wip"
+					},
+					{
+						"name": "Destination",
+						"value": "adfstorage//dbo.LockUp.json"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource"
+					},
+					"sink": {
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings",
+							"quoteAllText": true
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDSSQLToBlob",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SinkDSSQLToBlob",
 						"type": "DatasetReference"
 					}
 				]
