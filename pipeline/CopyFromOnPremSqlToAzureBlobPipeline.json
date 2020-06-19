@@ -41,7 +41,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDSSQLToBlob",
+						"referenceName": "SourceDSSQLToBlob_Lockup",
 						"type": "DatasetReference"
 					}
 				],
@@ -155,7 +155,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDSSQLToBlob",
+						"referenceName": "SourceDSSQLToBlob_wip",
 						"type": "DatasetReference"
 					}
 				],
