@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "dbo.LockUp.json",
 				"container": "adfstorage"
 			}
 		},
