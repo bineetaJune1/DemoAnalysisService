@@ -16,11 +16,11 @@
 				"userProperties": [
 					{
 						"name": "Source",
-						"value": "dbo.emp"
+						"value": "dbo.LockUp"
 					},
 					{
 						"name": "Destination",
-						"value": "adfstorage//"
+						"value": "adfstorage//dbo.LockUp.json"
 					}
 				],
 				"typeProperties": {
