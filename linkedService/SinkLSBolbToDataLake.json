@@ -1,0 +1,13 @@
+{
+	"name": "SinkLSBolbToDataLake",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://bineetadatalake.azuredatalakestore.net/webhdfs/v1",
+			"tenant": "404d2308-451a-4342-9c22-92734d4bdec6",
+			"subscriptionId": "f7ab6d2e-47aa-462a-b8d7-334126a21212",
+			"resourceGroupName": "Bineeta"
+		}
+	}
+}
