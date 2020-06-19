@@ -73,13 +73,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_vx6",
+						"referenceName": "SourceDSSQLToBlob",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_vx6",
+						"referenceName": "SinkDSSQLToBlob",
 						"type": "DatasetReference"
 					}
 				]
