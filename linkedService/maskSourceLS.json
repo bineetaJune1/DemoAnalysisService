@@ -1,0 +1,12 @@
+{
+	"name": "maskSourceLS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=reportdbdemo.database.windows.net;initial catalog=ReportDB;user id=reportDB",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIlRBUlJFRU5BXzhmNDYxN2ZjLWU0ZjItNGU0My05ZGYzLTY1YmU0MTNhYTFkZiINCn0="
+		}
+	}
+}
