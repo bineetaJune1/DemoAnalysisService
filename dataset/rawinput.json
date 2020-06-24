@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "LockUp2020-06-24T06:37:07.0755769Z.csv",
+				"fileName": "lockup2020-06-24T11:59:34.5942851Z.csv2020-06-24T11:59:34.7505381Z.csv",
 				"folderPath": "RawZone",
 				"fileSystem": "adsladitipoc"
 			},
