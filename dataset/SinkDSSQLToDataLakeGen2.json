@@ -1,0 +1,18 @@
+{
+	"name": "SinkDSSQLToDataLakeGen2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SinkLSSQLToDataLakeGen2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "RawZone",
+				"fileSystem": "adlspocbineeta"
+			}
+		}
+	}
+}
