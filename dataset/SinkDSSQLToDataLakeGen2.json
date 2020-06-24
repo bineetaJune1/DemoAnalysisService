@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "@concat(dataset().destfilename,utcnow(),'.csv')",
 				"folderPath": "RawZone",
 				"fileSystem": "adlspocbineeta"
 			}
