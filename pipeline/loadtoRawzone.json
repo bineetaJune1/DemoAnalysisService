@@ -271,6 +271,562 @@
 						}
 					}
 				]
+			},
+			{
+				"name": "Load WIP",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "ID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Aging",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Aging",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Bill_Status",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Bill_Status",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Currency_Type",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Currency_Type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Desc",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement_Desc",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Client",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement_Client",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Client_Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement_Client_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Manager",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement_Manager",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Manager_Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement_Manager_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Partner",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement_Partner",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Partner_Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement_Partner_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Last_Transaction_Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement_Last_Transaction_Date",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Responsible_Person_Job_Level",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement_Responsible_Person_Job_Level",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Year_Period_Posting_Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Year_Period_Posting_Date",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Year_Period_Working_Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Year_Period_Working_Date",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Office",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Office",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Admin_Surcharge",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Admin_Surcharge",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Aging1",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Aging1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Aging2",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Aging2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Aging3",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Aging3",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Aging4",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Aging4",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Aging5",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Aging5",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Aging6",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Aging6",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Aging_End1",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Aging_End1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Aging_End2",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Aging_End2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Aging_Rest",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Aging_Rest",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Billings",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Billings",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Cash_Collected",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Cash_Collected",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Closing_Wip_Balance_PY",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Closing_Wip_Balance_PY",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Estimate_Recoverable_Fee",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement_Estimate_Recoverable_Fee",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagment_Realization",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagment_Realization",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Expenses",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Expenses",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Hours_",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Hours_",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Hours_PY",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Hours_PY",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Last_Activity_Days",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Last_Activity_Days",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Net_Engagement_Revenue",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Net_Engagement_Revenue",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Net_Engagement_Revenue_PY",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Net_Engagement_Revenue_PY",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Receivable_Balance",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Receivable_Balance",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Receivable_Provision_Balance",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Receivable_Provision_Balance",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Revenue_@_Realization",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Revenue_@_Realization",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Revenue_@_Standard",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Revenue_@_Standard",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "WIP_Provison",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "WIP_Provison",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Write_On_Off",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Write_On_Off",
+									"type": "String"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "inputCsv",
+						"type": "DatasetReference",
+						"parameters": {
+							"inputfilename": {
+								"value": "@pipeline().parameters.sourcefile",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "targetCsv",
+						"type": "DatasetReference",
+						"parameters": {
+							"destfilename": {
+								"value": "@concat(pipeline().parameters.destinationfile,utcnow(),'.csv')",
+								"type": "Expression"
+							}
+						}
+					}
+				]
 			}
 		],
 		"parameters": {
