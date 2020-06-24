@@ -18,6 +18,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@concat(dataset().destinationfilename,'.json')",
+					"type": "Expression"
+				},
 				"folderPath": "RawZone",
 				"fileSystem": "adsladitipoc"
 			}

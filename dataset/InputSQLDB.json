@@ -196,7 +196,10 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "wip"
+			"table": {
+				"value": "@dataset().sourcefilename",
+				"type": "Expression"
+			}
 		}
 	}
 }
