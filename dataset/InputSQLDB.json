@@ -1,0 +1,197 @@
+{
+	"name": "InputSQLDB",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "InputSqlDB",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "DS_POC"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Aging",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Bill_Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Currency_Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Engagement",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Engagement_Desc",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Engagement_Client",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Engagement_Client_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Engagement_Manager",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Engagement_Manager_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Engagement_Partner",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Engagement_Partner_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Engagement_Last_Transaction_Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Engagement_Responsible_Person_Job_Level",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Fiscal_Year_Period_Posting_Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Fiscal_Year_Period_Working_Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Office",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Admin_Surcharge",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Aging1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Aging2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Aging3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Aging4",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Aging5",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Aging6",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Aging_End1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Aging_End2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Aging_Rest",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Billings",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Cash_Collected",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Closing_Wip_Balance_PY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Engagement_Estimate_Recoverable_Fee",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Engagment_Realization",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Expenses",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Hours_",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Hours_PY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Last_Activity_Days",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Net_Engagement_Revenue",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Net_Engagement_Revenue_PY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Receivable_Balance",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Receivable_Provision_Balance",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Revenue_@_Realization",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Revenue_@_Standard",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WIP_Provison",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Write_On_Off",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "wip"
+		}
+	}
+}
