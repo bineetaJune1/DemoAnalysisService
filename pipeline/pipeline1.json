@@ -1,0 +1,56 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "rawTotrusted",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "rawTotrusted",
+						"type": "DataFlowReference",
+						"datasetParameters": {
+							"RawFile": {
+								"destinationfilename": {
+									"value": "@pipeline().parameters.rawsource",
+									"type": "Expression"
+								}
+							},
+							"Trustedfile": {
+								"trustedfile": {
+									"value": "@concat(pipeline().parameters.trustedDest,utcnow(),'.json')",
+									"type": "Expression"
+								}
+							}
+						}
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"rawsource": {
+				"type": "string"
+			},
+			"trustedDest": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "Pipe_POC"
+		},
+		"annotations": []
+	}
+}
