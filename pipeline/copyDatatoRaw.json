@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "CopytoRawZone",
+				"name": "CopySQLDBtoRawZone",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -37,6 +37,60 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"sourcefilename": "LockUp"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "JsonDataLake",
+						"type": "DatasetReference",
+						"parameters": {
+							"destinationfilename": "LockUp"
+						}
+					}
+				]
+			},
+			{
+				"name": "CopyDataLaketoRawZone",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings",
+							"quoteAllText": true
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "inputDataLakeGen2",
+						"type": "DatasetReference",
+						"parameters": {
+							"datalakefilename": "LockUp.csv"
 						}
 					}
 				],
