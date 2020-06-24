@@ -5,6 +5,11 @@
 			"referenceName": "InputSqlDB",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"sourcefilename": {
+				"type": "string"
+			}
+		},
 		"folder": {
 			"name": "DS_POC"
 		},

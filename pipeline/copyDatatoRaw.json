@@ -34,13 +34,19 @@
 				"inputs": [
 					{
 						"referenceName": "InputSQLDB",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"sourcefilename": "LockUp"
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "JsonDataLake",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"destinationfilename": "LockUp"
+						}
 					}
 				]
 			}
