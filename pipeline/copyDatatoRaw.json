@@ -90,7 +90,7 @@
 						"referenceName": "inputDataLakeGen2",
 						"type": "DatasetReference",
 						"parameters": {
-							"datalakefilename": "LockUp.csv"
+							"datalakefilename": "WIP.csv"
 						}
 					}
 				],
@@ -99,7 +99,7 @@
 						"referenceName": "JsonDataLake",
 						"type": "DatasetReference",
 						"parameters": {
-							"destinationfilename": "LockUp"
+							"destinationfilename": "WIP"
 						}
 					}
 				]
