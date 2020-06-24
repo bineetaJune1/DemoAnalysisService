@@ -1,5 +1,5 @@
 {
-	"name": "copyDatatoRaw",
+	"name": "copySqlDBtoRaw",
 	"properties": {
 		"activities": [
 			{
