@@ -1,0 +1,31 @@
+{
+	"name": "rawTotrusted",
+	"properties": {
+		"folder": {
+			"name": "POC"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "JsonDataLake",
+						"type": "DatasetReference"
+					},
+					"name": "RawFile"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "JsonTrusted",
+						"type": "DatasetReference"
+					},
+					"name": "Trustedfile"
+				}
+			],
+			"transformations": [],
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tmoveFiles: ['lockup','Archive'],\n\twildcardPaths:['lockup']) ~> RawFile\nRawFile sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> Trustedfile"
+		}
+	}
+}

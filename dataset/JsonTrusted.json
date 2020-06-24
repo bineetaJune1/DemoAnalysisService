@@ -1,0 +1,30 @@
+{
+	"name": "JsonTrusted",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Gen2DataLake",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"trustedfile": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "DS_POC"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().trustedfile",
+					"type": "Expression"
+				},
+				"folderPath": "TrustedZone",
+				"fileSystem": "adsladitipoc"
+			}
+		}
+	}
+}
