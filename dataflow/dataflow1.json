@@ -1,0 +1,32 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "sourceblob",
+						"type": "DatasetReference"
+					},
+					"name": "source"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "targetblob",
+						"type": "DatasetReference"
+					},
+					"name": "target"
+				}
+			],
+			"transformations": [
+				{
+					"name": "masking"
+				}
+			],
+			"script": "source(output(\n\t\tName as string,\n\t\tPhone as string,\n\t\temail as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false) ~> source\nsource derive(email = sha2(256, email)) ~> masking\nmasking sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tfilePattern:'masking',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> target"
+		}
+	}
+}

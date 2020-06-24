@@ -1,0 +1,287 @@
+{
+	"name": "loadtoRawzone",
+	"properties": {
+		"activities": [
+			{
+				"name": "Load LockUp",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Currency Type",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Currency Type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Description",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement_Description",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Manager",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement_Manager",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Manager_Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement_Manager_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Partner",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement_Partner",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Partner_Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement_Partner_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Profit_Center",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement_Profit_Center",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Responsible_Person_Job_Level_Global",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Engagement_Responsible_Person_Job_Level_Global",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Year_Period",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Year_Period",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Office",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Office",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Current_Inputs_Rolling12mths_Ltcp",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Current_Inputs_Rolling12mths_Ltcp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Eng_Age_Kpi",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Eng_Age_Kpi",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Inputs_Over365days_LTP",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Inputs_Over365days_LTP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Lockup_Days_Without_Tax_Ltcp",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Lockup_Days_Without_Tax_Ltcp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Net_Investment_With_Tax_Ltcp",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Net_Investment_With_Tax_Ltcp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Unbilled_WIP_Ltcp",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Unbilled_WIP_Ltcp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ID",
+									"type": "String"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "inputCsv",
+						"type": "DatasetReference",
+						"parameters": {
+							"inputfilename": {
+								"value": "@pipeline().parameters.sourcefile",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "targetCsv",
+						"type": "DatasetReference",
+						"parameters": {
+							"destfilename": {
+								"value": "@concat(pipeline().parameters.destinationfile,utcnow(),'.csv')",
+								"type": "Expression"
+							}
+						}
+					}
+				]
+			}
+		],
+		"parameters": {
+			"sourcefile": {
+				"type": "string"
+			},
+			"destinationfile": {
+				"type": "string"
+			}
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

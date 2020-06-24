@@ -1,0 +1,32 @@
+{
+	"name": "inputCsv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "csvinput",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"inputfilename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().inputfilename",
+					"type": "Expression"
+				},
+				"fileSystem": "adsladitipoc"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
