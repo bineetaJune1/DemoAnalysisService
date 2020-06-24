@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "maskingDemo",
+				"name": "MaskingFromSQLToDatalakeGen2",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "maskingDemo",
+						"referenceName": "MaskingFromSQLToDatalakeGen2",
 						"type": "DataFlowReference"
 					},
 					"compute": {
