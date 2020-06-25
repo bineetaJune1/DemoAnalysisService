@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"inputFileName": {
+			"DSInputFileName": {
 				"type": "string",
 				"defaultValue": "LockUp2020-06-25T10:23:56.8540009Z.json"
 			}
