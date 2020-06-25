@@ -18,6 +18,16 @@
 					"dataflow": {
 						"referenceName": "MovingDataToTrustedZone",
 						"type": "DataFlowReference",
+						"parameters": {
+							"inputFileName": {
+								"value": "'@{pipeline().parameters.pipelineInputFile}'",
+								"type": "Expression"
+							},
+							"outputFileName": {
+								"value": "'@{pipeline().parameters.pipelineOutputFile}'",
+								"type": "Expression"
+							}
+						},
 						"datasetParameters": {
 							"sourceRaw": {
 								"inputFileName": "LockUp2020-06-25T10:23:56.8540009Z.json"
