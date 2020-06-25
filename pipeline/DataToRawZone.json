@@ -54,7 +54,7 @@
 						"referenceName": "SinkDSSQLToDataLakeGen2",
 						"type": "DatasetReference",
 						"parameters": {
-							"outputFileName": "LockUp.json"
+							"outputFileName": "LockUp"
 						}
 					}
 				]
