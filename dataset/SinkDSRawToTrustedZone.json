@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"outputFileName": {
+			"DSOutputFileName": {
 				"type": "string"
 			}
 		},
