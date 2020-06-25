@@ -14,5 +14,6 @@
 				"fileSystem": "adlspocbineeta"
 			}
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }
