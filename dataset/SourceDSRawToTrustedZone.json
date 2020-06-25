@@ -5,12 +5,20 @@
 			"referenceName": "SourceLSRawToTrustedZone",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"inputFileName": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "dbo.LockUp.json",
+				"fileName": {
+					"value": "@dataset().inputFileName",
+					"type": "Expression"
+				},
 				"folderPath": "RawZone",
 				"fileSystem": "adlspocbineeta"
 			}
