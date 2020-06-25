@@ -5,11 +5,20 @@
 			"referenceName": "SinkLSSQLToDataLakeGen2",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"outputFileName": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@concat(dataset().outputFileName,'utcnow()')",
+					"type": "Expression"
+				},
 				"folderPath": "RawZone",
 				"fileSystem": "adlspocbineeta"
 			}
