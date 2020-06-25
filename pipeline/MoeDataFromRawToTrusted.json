@@ -17,7 +17,15 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "MovingDataToTrustedZone",
-						"type": "DataFlowReference"
+						"type": "DataFlowReference",
+						"datasetParameters": {
+							"sourceRaw": {
+								"inputFileName": "LockUp2020-06-25T10:23:56.8540009Z.json"
+							},
+							"sink1": {
+								"outputFileName": "Lockup"
+							}
+						}
 					},
 					"compute": {
 						"coreCount": 8,
