@@ -3,7 +3,13 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SourceDSSQLToBlob_Lockup",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"inputTable": {
+					"value": "@dataset().inputTableName",
+					"type": "Expression"
+				}
+			}
 		},
 		"parameters": {
 			"inputTableName": {
