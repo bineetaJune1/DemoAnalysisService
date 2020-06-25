@@ -43,13 +43,19 @@
 				"inputs": [
 					{
 						"referenceName": "SourceDSSQLToBlob_Lockup",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"inputTableName": "LockUp"
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "SinkDSSQLToDataLakeGen2",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"outputFileName": "LockUp.json"
+						}
 					}
 				]
 			}
