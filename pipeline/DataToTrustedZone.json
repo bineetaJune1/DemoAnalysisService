@@ -30,10 +30,16 @@
 						},
 						"datasetParameters": {
 							"sourceRaw": {
-								"inputFileName": "LockUp2020-06-25T10:23:56.8540009Z.json"
+								"inputFileName": {
+									"value": "@pipeline().parameters.pipelineInputFile",
+									"type": "Expression"
+								}
 							},
 							"sink1": {
-								"outputFileName": "LockUp"
+								"outputFileName": {
+									"value": "@pipeline().parameters.pipelineOutputFile",
+									"type": "Expression"
+								}
 							}
 						}
 					},
