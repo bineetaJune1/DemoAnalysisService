@@ -5,6 +5,11 @@
 			"referenceName": "SourceDSSQLToBlob_Lockup",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"inputTable": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [
@@ -81,10 +86,6 @@
 				"type": "int",
 				"precision": 10
 			}
-		],
-		"typeProperties": {
-			"schema": "dbo",
-			"table": "LockUp"
-		}
+		]
 	}
 }
