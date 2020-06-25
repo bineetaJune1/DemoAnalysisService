@@ -1,0 +1,39 @@
+{
+	"name": "DataToTrustedZone",
+	"properties": {
+		"activities": [
+			{
+				"name": "MovingDataToTrustedZone",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "MovingDataToTrustedZone",
+						"type": "DataFlowReference",
+						"datasetParameters": {
+							"sourceRaw": {
+								"inputFileName": "LockUp2020-06-25T10:23:56.8540009Z"
+							},
+							"sink1": {
+								"outputFileName": "LockUp"
+							}
+						}
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					}
+				}
+			}
+		],
+		"annotations": []
+	}
+}
