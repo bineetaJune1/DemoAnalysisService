@@ -42,7 +42,10 @@
 				"inputs": [
 					{
 						"referenceName": "SourceDSSQLToBlob_Lockup",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"inputTableName": "dbo.LockUp"
+						}
 					}
 				],
 				"outputs": [
