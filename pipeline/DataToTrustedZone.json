@@ -27,20 +27,6 @@
 								"value": "'@{pipeline().parameters.pipelineOutputFile}'",
 								"type": "Expression"
 							}
-						},
-						"datasetParameters": {
-							"sourceRaw": {
-								"inputFileName": {
-									"value": "@pipeline().parameters.pipelineInputFile",
-									"type": "Expression"
-								}
-							},
-							"sink1": {
-								"outputFileName": {
-									"value": "@pipeline().parameters.pipelineOutputFile",
-									"type": "Expression"
-								}
-							}
 						}
 					},
 					"compute": {
