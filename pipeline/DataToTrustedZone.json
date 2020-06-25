@@ -20,7 +20,7 @@
 						"type": "DataFlowReference",
 						"datasetParameters": {
 							"sourceRaw": {
-								"inputFileName": "LockUp2020-06-25T10:23:56.8540009Z"
+								"inputFileName": "LockUp2020-06-25T10:23:56.8540009Z.json"
 							},
 							"sink1": {
 								"outputFileName": "LockUp"
