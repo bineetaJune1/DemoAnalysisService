@@ -5,11 +5,20 @@
 			"referenceName": "SinkLSRawToTrustedZone",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"outputFileName": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@concat(dataset().outputFileName,utcnow(),'.json')",
+					"type": "Expression"
+				},
 				"folderPath": "TrustedZone",
 				"fileSystem": "adlspocbineeta"
 			}
