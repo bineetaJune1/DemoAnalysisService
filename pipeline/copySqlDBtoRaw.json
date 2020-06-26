@@ -50,7 +50,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"destinationfilename": {
-								"value": "@concat('wip','.json')",
+								"value": "@concat(pipeline().parameters.destfile,formatDateTime(utcnow(),'yyyyMMdd'),'.json')",
 								"type": "Expression"
 							}
 						}
@@ -60,6 +60,9 @@
 		],
 		"parameters": {
 			"sourcetable": {
+				"type": "string"
+			},
+			"destfile": {
 				"type": "string"
 			}
 		},
