@@ -10,13 +10,13 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "LockUp2020-06-26T07:59:42.2802118Z.csv",
+				"fileName": "LockUp.csv",
 				"folderPath": "RawZone",
 				"fileSystem": "adlspocbineeta"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
-			"firstRowAsHeader": false,
+			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
 		"schema": [
