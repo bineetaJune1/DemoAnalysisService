@@ -81,11 +81,7 @@
 				"type": "int",
 				"precision": 10
 			}
-		],
-		"typeProperties": {
-			"schema": "dbo",
-			"table": "LockUp"
-		}
+		]
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
 }
