@@ -15,34 +15,6 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataflow": {
-						"referenceName": "MovingDataToTrustedZone",
-						"type": "DataFlowReference",
-						"parameters": {
-							"inputFileName": {
-								"value": "'@{pipeline().parameters.pipelineInputFile}'",
-								"type": "Expression"
-							},
-							"outputFileName": {
-								"value": "'@{pipeline().parameters.pipelineOutputFile}'",
-								"type": "Expression"
-							}
-						},
-						"datasetParameters": {
-							"sourceRaw": {
-								"DSInputFileName": {
-									"value": "@pipeline().parameters.pipelineInputFile",
-									"type": "Expression"
-								}
-							},
-							"sink1": {
-								"DSOutputFileName": {
-									"value": "@pipeline().parameters.pipelineOutputFile",
-									"type": "Expression"
-								}
-							}
-						}
-					},
 					"compute": {
 						"coreCount": 8,
 						"computeType": "General"

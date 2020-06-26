@@ -15,20 +15,6 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataflow": {
-						"referenceName": "MovingDataToTrustedZone",
-						"type": "DataFlowReference",
-						"parameters": {
-							"inputFileName": {
-								"value": "'@{pipeline().parameters.pipelineInputFileName}'",
-								"type": "Expression"
-							},
-							"outputFileName": {
-								"value": "'@{pipeline().parameters.pipelineOutputFileName}'",
-								"type": "Expression"
-							}
-						}
-					},
 					"compute": {
 						"coreCount": 8,
 						"computeType": "General"
