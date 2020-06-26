@@ -50,7 +50,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"csvfilename": {
-								"value": "@concat(pipeline().parameters.destinationcsv,'.csv')",
+								"value": "@concat(pipeline().parameters.destinationcsv,utcnow(),'.csv')",
 								"type": "Expression"
 							}
 						}
