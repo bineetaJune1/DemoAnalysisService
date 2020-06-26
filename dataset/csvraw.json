@@ -18,7 +18,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "RawZone",
+				"folderPath": "TrustedZone",
 				"fileSystem": "adsladitipoc"
 			},
 			"columnDelimiter": ",",
