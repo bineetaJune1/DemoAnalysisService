@@ -50,7 +50,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"csvfilename": {
-								"value": "@concat(pipeline().parameters.destinationcsv,utcnow(),'.csv')",
+								"value": "@concat('WIP',utcnow(),'.csv')",
 								"type": "Expression"
 							}
 						}
@@ -60,9 +60,6 @@
 		],
 		"parameters": {
 			"sourcetable": {
-				"type": "string"
-			},
-			"destinationcsv": {
 				"type": "string"
 			}
 		},
