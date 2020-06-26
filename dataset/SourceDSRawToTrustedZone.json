@@ -15,10 +15,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@dataset().DSInputFileName",
-					"type": "Expression"
-				},
+				"fileName": "LockUp2020-06-26T07:59:42.2802118Z.csv",
 				"folderPath": "RawZone",
 				"fileSystem": "adlspocbineeta"
 			}
