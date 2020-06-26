@@ -22,7 +22,7 @@
 				}
 			],
 			"transformations": [],
-			"script": "source(allowSchemaDrift: false,\n\tvalidateSchema: false) ~> source\nsource sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tmapColumn(\n\t\t{} = Column_1\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sink1"
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false) ~> source\nsource sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sink1"
 		}
 	}
 }
