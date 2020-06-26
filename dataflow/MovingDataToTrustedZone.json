@@ -26,7 +26,7 @@
 					"name": "MaskingEngagementDescription"
 				}
 			],
-			"script": "parameters{\n\tinputFileName as string,\n\toutputFileName as string\n}\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false) ~> sourceRaw\nsourceRaw derive(Engagement_Description = sha2(256, Engagement_Description)) ~> MaskingEngagementDescription\nMaskingEngagementDescription sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tmapColumn(\n\t\t{Currency Type},\n\t\tEngagement,\n\t\tEngagement_Description,\n\t\tEngagement_Manager,\n\t\tEngagement_Manager_Name,\n\t\tEngagement_Partner,\n\t\tEngagement_Partner_Name,\n\t\tEngagement_Profit_Center,\n\t\tEngagement_Responsible_Person_Job_Level_Global,\n\t\tFiscal_Year_Period,\n\t\tOffice,\n\t\tCurrent_Inputs_Rolling12mths_Ltcp,\n\t\tEng_Age_Kpi,\n\t\tInputs_Over365days_LTP,\n\t\tLockup_Days_Without_Tax_Ltcp,\n\t\tNet_Investment_With_Tax_Ltcp,\n\t\tUnbilled_WIP_Ltcp,\n\t\tID\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sink1"
+			"script": "parameters{\n\tinputFileName as string,\n\toutputFileName as string\n}\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false) ~> sourceRaw\nsourceRaw derive(Engagement_Description = sha2(256, Engagement_Description)) ~> MaskingEngagementDescription\nMaskingEngagementDescription sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tmapColumn(\n\t\tEngagement_Description\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sink1"
 		}
 	}
 }
