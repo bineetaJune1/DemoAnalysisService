@@ -26,14 +26,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"pipelineInputFile": {
-				"type": "string"
-			},
-			"pipelineOutputFile": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
