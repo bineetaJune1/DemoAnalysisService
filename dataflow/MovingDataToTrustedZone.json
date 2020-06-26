@@ -3,30 +3,10 @@
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
-			"sources": [
-				{
-					"dataset": {
-						"referenceName": "SourceDSRawToTrustedZone",
-						"type": "DatasetReference"
-					},
-					"name": "sourceRaw"
-				}
-			],
-			"sinks": [
-				{
-					"dataset": {
-						"referenceName": "SinkDSRawToTrustedZone",
-						"type": "DatasetReference"
-					},
-					"name": "sink1"
-				}
-			],
-			"transformations": [
-				{
-					"name": "MaskingEngagementDescription"
-				}
-			],
-			"script": "parameters{\n\tinputFileName as string,\n\toutputFileName as string\n}\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false) ~> sourceRaw\nsourceRaw derive(Engagement_Description = sha2(256, Engagement_Description)) ~> MaskingEngagementDescription\nMaskingEngagementDescription sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tmapColumn(\n\t\tEngagement_Description\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sink1"
+			"sources": [],
+			"sinks": [],
+			"transformations": [],
+			"script": "parameters{\n\tinputFileName as string,\n\toutputFileName as string\n}"
 		}
 	}
 }
