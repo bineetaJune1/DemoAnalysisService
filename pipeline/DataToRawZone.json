@@ -29,16 +29,184 @@
 						"queryTimeout": "02:00:00"
 					},
 					"sink": {
-						"type": "JsonSink",
+						"type": "DelimitedTextSink",
 						"storeSettings": {
 							"type": "AzureBlobFSWriteSettings"
 						},
 						"formatSettings": {
-							"type": "JsonWriteSettings",
-							"quoteAllText": true
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Currency Type",
+									"type": "String"
+								},
+								"sink": {
+									"ordinal": 1
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement",
+									"type": "String"
+								},
+								"sink": {
+									"ordinal": 2
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Description",
+									"type": "String"
+								},
+								"sink": {
+									"ordinal": 3
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Manager",
+									"type": "String"
+								},
+								"sink": {
+									"ordinal": 4
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Manager_Name",
+									"type": "String"
+								},
+								"sink": {
+									"ordinal": 5
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Partner",
+									"type": "String"
+								},
+								"sink": {
+									"ordinal": 6
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Partner_Name",
+									"type": "String"
+								},
+								"sink": {
+									"ordinal": 7
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Profit_Center",
+									"type": "String"
+								},
+								"sink": {
+									"ordinal": 8
+								}
+							},
+							{
+								"source": {
+									"name": "Engagement_Responsible_Person_Job_Level_Global",
+									"type": "String"
+								},
+								"sink": {
+									"ordinal": 9
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Year_Period",
+									"type": "String"
+								},
+								"sink": {
+									"ordinal": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Office",
+									"type": "String"
+								},
+								"sink": {
+									"ordinal": 11
+								}
+							},
+							{
+								"source": {
+									"name": "Current_Inputs_Rolling12mths_Ltcp",
+									"type": "String"
+								},
+								"sink": {
+									"ordinal": 12
+								}
+							},
+							{
+								"source": {
+									"name": "Eng_Age_Kpi",
+									"type": "String"
+								},
+								"sink": {
+									"ordinal": 13
+								}
+							},
+							{
+								"source": {
+									"name": "Inputs_Over365days_LTP",
+									"type": "String"
+								},
+								"sink": {
+									"ordinal": 14
+								}
+							},
+							{
+								"source": {
+									"name": "Lockup_Days_Without_Tax_Ltcp",
+									"type": "String"
+								},
+								"sink": {
+									"ordinal": 15
+								}
+							},
+							{
+								"source": {
+									"name": "Net_Investment_With_Tax_Ltcp",
+									"type": "String"
+								},
+								"sink": {
+									"ordinal": 16
+								}
+							},
+							{
+								"source": {
+									"name": "Unbilled_WIP_Ltcp",
+									"type": "String"
+								},
+								"sink": {
+									"ordinal": 17
+								}
+							},
+							{
+								"source": {
+									"name": "ID",
+									"type": "Int32"
+								},
+								"sink": {
+									"ordinal": 18
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
@@ -52,10 +220,7 @@
 				"outputs": [
 					{
 						"referenceName": "SinkDSSQLToDataLakeGen2",
-						"type": "DatasetReference",
-						"parameters": {
-							"outputFileName": "LockUp"
-						}
+						"type": "DatasetReference"
 					}
 				]
 			}
