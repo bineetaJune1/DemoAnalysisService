@@ -22,7 +22,7 @@
 					"value": "@dataset().destinationfilename",
 					"type": "Expression"
 				},
-				"folderPath": "RawZone",
+				"folderPath": "RawZone/temp",
 				"fileSystem": "adsladitipoc"
 			}
 		}
