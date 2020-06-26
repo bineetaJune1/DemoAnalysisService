@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "LockUp.csv",
+				"fileName": "*.csv",
 				"folderPath": "TrustedZone",
 				"fileSystem": "adlspocbineeta"
 			},
