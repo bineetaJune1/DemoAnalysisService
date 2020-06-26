@@ -1,0 +1,22 @@
+{
+	"name": "SinkDSRawToTrustedZone",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SinkLSRawToTrustedZone",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "TrustedZone",
+				"fileSystem": "adlspocbineeta"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
