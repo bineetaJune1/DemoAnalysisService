@@ -16,7 +16,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@concat(dataset().outputFileName,utcnow(),'.json')",
+					"value": "@concat(dataset().outputFileName,utcnow(),'.csv')",
 					"type": "Expression"
 				},
 				"folderPath": "RawZone",
