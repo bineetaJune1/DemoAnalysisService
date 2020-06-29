@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "DF_temp_to_target",
+				"name": "DF_tempTotarget",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -16,17 +16,17 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "DF_temp_to_target",
+						"referenceName": "DF_tempTotarget",
 						"type": "DataFlowReference",
 						"datasetParameters": {
 							"source1": {
-								"filename": {
+								"sourceFileName": {
 									"value": "@pipeline().parameters.sourcefile",
 									"type": "Expression"
 								}
 							},
 							"sink1": {
-								"TargetFileName": {
+								"targetfilename": {
 									"value": "@concat(pipeline().parameters.targetfile,'.csv')",
 									"type": "Expression"
 								}
