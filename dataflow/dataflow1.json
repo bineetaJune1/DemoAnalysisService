@@ -9,23 +9,23 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "testcsv",
+						"referenceName": "DF_CSVsource",
 						"type": "DatasetReference"
 					},
-					"name": "source1"
+					"name": "csvsource"
 				}
 			],
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "targetfinal",
+						"referenceName": "DF_CSVTarget",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"
 				}
 			],
 			"transformations": [],
-			"script": "source(output(\n\t\tID as short,\n\t\tAging as string,\n\t\tBill_Status as string,\n\t\tCurrency_Type as short,\n\t\tEngagement as short,\n\t\tEngagement_Desc as string,\n\t\tEngagement_Client as short,\n\t\tEngagement_Client_Name as string,\n\t\tEngagement_Manager as short,\n\t\tEngagement_Manager_Name as string,\n\t\tEngagement_Partner as short,\n\t\tEngagement_Partner_Name as string,\n\t\tEngagement_Last_Transaction_Date as date,\n\t\tEngagement_Responsible_Person_Job_Level as string,\n\t\tFiscal_Year_Period_Posting_Date as integer,\n\t\tFiscal_Year_Period_Working_Date as integer,\n\t\tOffice as string,\n\t\tAdmin_Surcharge as string,\n\t\tAging1 as string,\n\t\tAging2 as string,\n\t\tAging3 as string,\n\t\tAging4 as string,\n\t\tAging5 as string,\n\t\tAging6 as string,\n\t\tAging_End1 as short,\n\t\tAging_End2 as string,\n\t\tAging_Rest as short,\n\t\tBillings as double,\n\t\tCash_Collected as string,\n\t\tClosing_Wip_Balance_PY as double,\n\t\tEngagement_Estimate_Recoverable_Fee as string,\n\t\tEngagment_Realization as string,\n\t\tExpenses as string,\n\t\tHours_ as short,\n\t\tHours_PY as string,\n\t\tLast_Activity_Days as short,\n\t\tNet_Engagement_Revenue as short,\n\t\tNet_Engagement_Revenue_PY as string,\n\t\tReceivable_Balance as string,\n\t\tReceivable_Provision_Balance as string,\n\t\t{Revenue_@_Realization} as string,\n\t\t{Revenue_@_Standard} as string,\n\t\tWIP_Provison as string,\n\t\tWrite_On_Off as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tunquotedColumnNames: true) ~> source1\nsource1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tpartitionFileNames:['wip_final.csv'],\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sink1"
+			"script": "source(output(\n\t\tColumn_1 as string,\n\t\tColumn_2 as string,\n\t\tColumn_3 as string,\n\t\tColumn_4 as string,\n\t\tColumn_5 as string,\n\t\tColumn_6 as string,\n\t\tColumn_7 as string,\n\t\tColumn_8 as string,\n\t\tColumn_9 as string,\n\t\tColumn_10 as string,\n\t\tColumn_11 as string,\n\t\tColumn_12 as string,\n\t\tColumn_13 as string,\n\t\tColumn_14 as string,\n\t\tColumn_15 as string,\n\t\tColumn_16 as string,\n\t\tColumn_17 as string,\n\t\tColumn_18 as string,\n\t\tColumn_19 as string,\n\t\tColumn_20 as string,\n\t\tColumn_21 as string,\n\t\tColumn_22 as string,\n\t\tColumn_23 as string,\n\t\tColumn_24 as string,\n\t\tColumn_25 as string,\n\t\tColumn_26 as string,\n\t\tColumn_27 as string,\n\t\tColumn_28 as string,\n\t\tColumn_29 as string,\n\t\tColumn_30 as string,\n\t\tColumn_31 as string,\n\t\tColumn_32 as string,\n\t\tColumn_33 as string,\n\t\tColumn_34 as string,\n\t\tColumn_35 as string,\n\t\tColumn_36 as string,\n\t\tColumn_37 as string,\n\t\tColumn_38 as string,\n\t\tColumn_39 as string,\n\t\tColumn_40 as string,\n\t\tColumn_41 as string,\n\t\tColumn_42 as string,\n\t\tColumn_43 as string,\n\t\tColumn_44 as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tunquotedColumnNames: true) ~> csvsource\ncsvsource sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tpartitionFileNames:['wip_final.csv'],\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sink1"
 		}
 	}
 }
