@@ -26,13 +26,14 @@
 						}
 					},
 					"sink": {
-						"type": "JsonSink",
+						"type": "DelimitedTextSink",
 						"storeSettings": {
 							"type": "AzureBlobFSWriteSettings"
 						},
 						"formatSettings": {
-							"type": "JsonWriteSettings",
-							"quoteAllText": true
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ""
 						}
 					},
 					"enableStaging": false
@@ -51,11 +52,11 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "JsonDataLake",
+						"referenceName": "csvraw",
 						"type": "DatasetReference",
 						"parameters": {
-							"destinationfilename": {
-								"value": "@concat(pipeline().parameters.targetfile,utcnow(),'.json')",
+							"csvDestFileName": {
+								"value": "@concat(pipeline().parameters.targetfile,utcnow(),'.csv')",
 								"type": "Expression"
 							}
 						}
