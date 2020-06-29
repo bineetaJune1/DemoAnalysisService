@@ -19,17 +19,8 @@
 						"referenceName": "rawTotrusted",
 						"type": "DataFlowReference",
 						"datasetParameters": {
-							"RawFile": {
-								"destinationfilename": {
-									"value": "@pipeline().parameters.rawsource",
-									"type": "Expression"
-								}
-							},
-							"Trustedfile": {
-								"trustedfile": {
-									"value": "@concat(pipeline().parameters.trustedDest,utcnow(),'.json')",
-									"type": "Expression"
-								}
+							"tempsource": {
+								"destinationfilename": "lockup20200626.json"
 							}
 						}
 					},
