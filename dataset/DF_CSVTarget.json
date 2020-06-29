@@ -6,9 +6,6 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"FilePath": {
-				"type": "string"
-			},
 			"TargetFileName": {
 				"type": "string"
 			}
@@ -25,10 +22,7 @@
 					"value": "@dataset().TargetFileName",
 					"type": "Expression"
 				},
-				"folderPath": {
-					"value": "@dataset().FilePath",
-					"type": "Expression"
-				},
+				"folderPath": "RawZone/final",
 				"fileSystem": "adsladitipoc"
 			},
 			"columnDelimiter": ",",
