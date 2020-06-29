@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "part-00000-tid-4531244644896924298-c9386868-6b4b-49b7-9bbf-766dd7107062-50-1-c000.csv",
+				"fileName": "LockUp2020-06-29.csv",
 				"folderPath": "TrustedZone",
 				"fileSystem": "adlspocbineeta"
 			},
