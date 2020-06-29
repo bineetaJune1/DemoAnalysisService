@@ -1,0 +1,212 @@
+{
+	"name": "DS_sourceCSV",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Gen2DataLake",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"sourceFileName": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "DS_POC"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().sourceFileName",
+					"type": "Expression"
+				},
+				"folderPath": "RawZone/temp",
+				"fileSystem": "adsladitipoc"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ID",
+				"type": "String"
+			},
+			{
+				"name": "Aging",
+				"type": "String"
+			},
+			{
+				"name": "Bill_Status",
+				"type": "String"
+			},
+			{
+				"name": "Currency_Type",
+				"type": "String"
+			},
+			{
+				"name": "Engagement",
+				"type": "String"
+			},
+			{
+				"name": "Engagement_Desc",
+				"type": "String"
+			},
+			{
+				"name": "Engagement_Client",
+				"type": "String"
+			},
+			{
+				"name": "Engagement_Client_Name",
+				"type": "String"
+			},
+			{
+				"name": "Engagement_Manager",
+				"type": "String"
+			},
+			{
+				"name": "Engagement_Manager_Name",
+				"type": "String"
+			},
+			{
+				"name": "Engagement_Partner",
+				"type": "String"
+			},
+			{
+				"name": "Engagement_Partner_Name",
+				"type": "String"
+			},
+			{
+				"name": "Engagement_Last_Transaction_Date",
+				"type": "String"
+			},
+			{
+				"name": "Engagement_Responsible_Person_Job_Level",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Year_Period_Posting_Date",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Year_Period_Working_Date",
+				"type": "String"
+			},
+			{
+				"name": "Office",
+				"type": "String"
+			},
+			{
+				"name": "Admin_Surcharge",
+				"type": "String"
+			},
+			{
+				"name": "Aging1",
+				"type": "String"
+			},
+			{
+				"name": "Aging2",
+				"type": "String"
+			},
+			{
+				"name": "Aging3",
+				"type": "String"
+			},
+			{
+				"name": "Aging4",
+				"type": "String"
+			},
+			{
+				"name": "Aging5",
+				"type": "String"
+			},
+			{
+				"name": "Aging6",
+				"type": "String"
+			},
+			{
+				"name": "Aging_End1",
+				"type": "String"
+			},
+			{
+				"name": "Aging_End2",
+				"type": "String"
+			},
+			{
+				"name": "Aging_Rest",
+				"type": "String"
+			},
+			{
+				"name": "Billings",
+				"type": "String"
+			},
+			{
+				"name": "Cash_Collected",
+				"type": "String"
+			},
+			{
+				"name": "Closing_Wip_Balance_PY",
+				"type": "String"
+			},
+			{
+				"name": "Engagement_Estimate_Recoverable_Fee",
+				"type": "String"
+			},
+			{
+				"name": "Engagment_Realization",
+				"type": "String"
+			},
+			{
+				"name": "Expenses",
+				"type": "String"
+			},
+			{
+				"name": "Hours_",
+				"type": "String"
+			},
+			{
+				"name": "Hours_PY",
+				"type": "String"
+			},
+			{
+				"name": "Last_Activity_Days",
+				"type": "String"
+			},
+			{
+				"name": "Net_Engagement_Revenue",
+				"type": "String"
+			},
+			{
+				"name": "Net_Engagement_Revenue_PY",
+				"type": "String"
+			},
+			{
+				"name": "Receivable_Balance",
+				"type": "String"
+			},
+			{
+				"name": "Receivable_Provision_Balance",
+				"type": "String"
+			},
+			{
+				"name": "Revenue_@_Realization",
+				"type": "String"
+			},
+			{
+				"name": "Revenue_@_Standard",
+				"type": "String"
+			},
+			{
+				"name": "WIP_Provison",
+				"type": "String"
+			},
+			{
+				"name": "Write_On_Off",
+				"type": "String"
+			}
+		]
+	}
+}
