@@ -5,11 +5,6 @@
 			"referenceName": "Gen2DataLake",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"targetfilename": {
-				"type": "string"
-			}
-		},
 		"folder": {
 			"name": "DS_POC"
 		},
