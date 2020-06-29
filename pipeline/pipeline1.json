@@ -26,11 +26,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"sourcefile": {
-				"type": "string"
-			}
-		},
 		"folder": {
 			"name": "Pipe_POC"
 		},
