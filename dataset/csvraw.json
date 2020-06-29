@@ -18,6 +18,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().csvDestFileName",
+					"type": "Expression"
+				},
 				"folderPath": "RawZone/temp",
 				"fileSystem": "adsladitipoc"
 			},
