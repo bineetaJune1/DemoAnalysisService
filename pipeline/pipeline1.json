@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "dataflow1",
+				"name": "DF_temp_to_target",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -16,8 +16,22 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "dataflow1",
-						"type": "DataFlowReference"
+						"referenceName": "DF_temp_to_target",
+						"type": "DataFlowReference",
+						"datasetParameters": {
+							"source1": {
+								"filename": {
+									"value": "@pipeline().parameters.sourcefile",
+									"type": "Expression"
+								}
+							},
+							"sink1": {
+								"TargetFileName": {
+									"value": "@concat(pipeline().parameters.targetfile,'.csv')",
+									"type": "Expression"
+								}
+							}
+						}
 					},
 					"compute": {
 						"coreCount": 8,
@@ -26,6 +40,14 @@
 				}
 			}
 		],
+		"parameters": {
+			"sourcefile": {
+				"type": "string"
+			},
+			"targetfile": {
+				"type": "string"
+			}
+		},
 		"folder": {
 			"name": "Pipe_POC"
 		},
