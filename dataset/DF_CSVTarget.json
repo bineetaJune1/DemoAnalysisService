@@ -13,8 +13,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "wip2020-06-29.csv",
-				"folderPath": "RawZone/temp",
+				"folderPath": "RawZone/final",
 				"fileSystem": "adsladitipoc"
 			},
 			"columnDelimiter": ",",
