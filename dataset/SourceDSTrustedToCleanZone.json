@@ -21,57 +21,75 @@
 		},
 		"schema": [
 			{
+				"name": "Currency Type",
 				"type": "String"
 			},
 			{
+				"name": "Engagement",
 				"type": "String"
 			},
 			{
+				"name": "Engagement_Description",
 				"type": "String"
 			},
 			{
+				"name": "Engagement_Manager",
 				"type": "String"
 			},
 			{
+				"name": "Engagement_Manager_Name",
 				"type": "String"
 			},
 			{
+				"name": "Engagement_Partner",
 				"type": "String"
 			},
 			{
+				"name": "Engagement_Partner_Name",
 				"type": "String"
 			},
 			{
+				"name": "Engagement_Profit_Center",
 				"type": "String"
 			},
 			{
+				"name": "Engagement_Responsible_Person_Job_Level_Global",
 				"type": "String"
 			},
 			{
+				"name": "Fiscal_Year_Period",
 				"type": "String"
 			},
 			{
+				"name": "Office",
 				"type": "String"
 			},
 			{
+				"name": "Current_Inputs_Rolling12mths_Ltcp",
 				"type": "String"
 			},
 			{
+				"name": "Eng_Age_Kpi",
 				"type": "String"
 			},
 			{
+				"name": "Inputs_Over365days_LTP",
 				"type": "String"
 			},
 			{
+				"name": "Lockup_Days_Without_Tax_Ltcp",
 				"type": "String"
 			},
 			{
+				"name": "Net_Investment_With_Tax_Ltcp",
 				"type": "String"
 			},
 			{
+				"name": "Unbilled_WIP_Ltcp",
 				"type": "String"
 			},
 			{
+				"name": "ID",
 				"type": "String"
 			}
 		]
