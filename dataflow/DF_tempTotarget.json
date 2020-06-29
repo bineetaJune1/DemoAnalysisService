@@ -15,9 +15,21 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
-			"transformations": [],
-			"script": "source(output(\n\t\tID as integer,\n\t\tAging as string,\n\t\tBill_Status as string,\n\t\tCurrency_Type as short,\n\t\tEngagement as integer,\n\t\tEngagement_Desc as string,\n\t\tEngagement_Client as integer,\n\t\tEngagement_Client_Name as string,\n\t\tEngagement_Manager as integer,\n\t\tEngagement_Manager_Name as string,\n\t\tEngagement_Partner as integer,\n\t\tEngagement_Partner_Name as string,\n\t\tEngagement_Last_Transaction_Date as date,\n\t\tEngagement_Responsible_Person_Job_Level as string,\n\t\tFiscal_Year_Period_Posting_Date as integer,\n\t\tFiscal_Year_Period_Working_Date as integer,\n\t\tOffice as string,\n\t\tAdmin_Surcharge as string,\n\t\tAging1 as string,\n\t\tAging2 as string,\n\t\tAging3 as string,\n\t\tAging4 as string,\n\t\tAging5 as string,\n\t\tAging6 as string,\n\t\tAging_End1 as short,\n\t\tAging_End2 as string,\n\t\tAging_Rest as short,\n\t\tBillings as double,\n\t\tCash_Collected as string,\n\t\tClosing_Wip_Balance_PY as double,\n\t\tEngagement_Estimate_Recoverable_Fee as string,\n\t\tEngagment_Realization as string,\n\t\tExpenses as string,\n\t\tHours_ as integer,\n\t\tHours_PY as string,\n\t\tLast_Activity_Days as short,\n\t\tNet_Engagement_Revenue as short,\n\t\tNet_Engagement_Revenue_PY as string,\n\t\tReceivable_Balance as string,\n\t\tReceivable_Provision_Balance as string,\n\t\t{Revenue_@_Realization} as string,\n\t\t{Revenue_@_Standard} as string,\n\t\tWIP_Provison as string,\n\t\tWrite_On_Off as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false) ~> source1"
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "DS_targetCSV",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "DerivedColumn1"
+				}
+			],
+			"script": "source(output(\n\t\tID as integer,\n\t\tAging as string,\n\t\tBill_Status as string,\n\t\tCurrency_Type as short,\n\t\tEngagement as integer,\n\t\tEngagement_Desc as string,\n\t\tEngagement_Client as integer,\n\t\tEngagement_Client_Name as string,\n\t\tEngagement_Manager as integer,\n\t\tEngagement_Manager_Name as string,\n\t\tEngagement_Partner as integer,\n\t\tEngagement_Partner_Name as string,\n\t\tEngagement_Last_Transaction_Date as date,\n\t\tEngagement_Responsible_Person_Job_Level as string,\n\t\tFiscal_Year_Period_Posting_Date as integer,\n\t\tFiscal_Year_Period_Working_Date as integer,\n\t\tOffice as string,\n\t\tAdmin_Surcharge as string,\n\t\tAging1 as string,\n\t\tAging2 as string,\n\t\tAging3 as string,\n\t\tAging4 as string,\n\t\tAging5 as string,\n\t\tAging6 as string,\n\t\tAging_End1 as short,\n\t\tAging_End2 as string,\n\t\tAging_Rest as short,\n\t\tBillings as double,\n\t\tCash_Collected as string,\n\t\tClosing_Wip_Balance_PY as double,\n\t\tEngagement_Estimate_Recoverable_Fee as string,\n\t\tEngagment_Realization as string,\n\t\tExpenses as string,\n\t\tHours_ as integer,\n\t\tHours_PY as string,\n\t\tLast_Activity_Days as short,\n\t\tNet_Engagement_Revenue as short,\n\t\tNet_Engagement_Revenue_PY as string,\n\t\tReceivable_Balance as string,\n\t\tReceivable_Provision_Balance as string,\n\t\t{Revenue_@_Realization} as string,\n\t\t{Revenue_@_Standard} as string,\n\t\tWIP_Provison as string,\n\t\tWrite_On_Off as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false) ~> source1\nsource1 derive(filename = 'wip'+toString(currentDate())+'.csv') ~> DerivedColumn1\nDerivedColumn1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tpartitionFileNames:['filename'],\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sink1"
 		}
 	}
 }
