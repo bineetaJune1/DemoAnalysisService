@@ -1,0 +1,22 @@
+{
+	"name": "sourcejson",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Gen2DataLake",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "DS_POC"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "wip2020-06-29T08:26:58.1922323Z.json",
+				"folderPath": "RawZone/temp",
+				"fileSystem": "adsladitipoc"
+			}
+		}
+	}
+}
