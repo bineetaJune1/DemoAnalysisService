@@ -1,0 +1,22 @@
+{
+	"name": "inputjson",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Gen2DataLake",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "DS_POC"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "lockup20200626.json",
+				"folderPath": "RawZone/temp",
+				"fileSystem": "adsladitipoc"
+			}
+		}
+	}
+}
