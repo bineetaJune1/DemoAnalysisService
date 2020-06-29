@@ -18,7 +18,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "wip2020-06-29.csv",
+				"fileName": {
+					"value": "@dataset().sourceCsvfile",
+					"type": "Expression"
+				},
 				"folderPath": "RawZone/temp",
 				"fileSystem": "adsladitipoc"
 			},
