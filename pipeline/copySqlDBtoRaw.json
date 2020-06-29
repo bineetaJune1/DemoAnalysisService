@@ -50,7 +50,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"csvDestFileName": {
-								"value": "@concat(pipeline().parameters.destfile,formatDateTime(utcnow(),'yyyy-MM-dd'))",
+								"value": "@concat(pipeline().parameters.destfile,formatDateTime(utcnow(),'yyyy-MM-dd'),'.csv')",
 								"type": "Expression"
 							}
 						}
