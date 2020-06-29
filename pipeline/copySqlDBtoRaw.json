@@ -56,6 +56,68 @@
 						}
 					}
 				]
+			},
+			{
+				"name": "CopySQLDBtoRawZone_copy1",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "CopySQLDBtoRawZone",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"queryTimeout": "02:00:00"
+					},
+					"sink": {
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings",
+							"quoteAllText": true,
+							"filePattern": "arrayOfObjects"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "InputSQLDB",
+						"type": "DatasetReference",
+						"parameters": {
+							"sourcefilename": {
+								"value": "@pipeline().parameters.sourcetable",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "JsonDataLake",
+						"type": "DatasetReference",
+						"parameters": {
+							"destinationfilename": {
+								"value": "@concat(pipeline().parameters.destfile,utcnow(),'.json')",
+								"type": "Expression"
+							}
+						}
+					}
+				]
 			}
 		],
 		"parameters": {
