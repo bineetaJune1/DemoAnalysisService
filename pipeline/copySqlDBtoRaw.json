@@ -22,12 +22,13 @@
 					"sink": {
 						"type": "JsonSink",
 						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings"
+							"type": "AzureBlobFSWriteSettings",
+							"copyBehavior": "FlattenHierarchy"
 						},
 						"formatSettings": {
 							"type": "JsonWriteSettings",
 							"quoteAllText": true,
-							"filePattern": "arrayOfObjects"
+							"filePattern": "setOfObjects"
 						}
 					},
 					"enableStaging": false
