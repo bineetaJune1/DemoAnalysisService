@@ -1,9 +1,14 @@
 {
-	"name": "targetfinal",
+	"name": "DF_CSVTarget",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Gen2DataLake",
 			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"TargetFileName": {
+				"type": "string"
+			}
 		},
 		"folder": {
 			"name": "DS_POC"
@@ -13,6 +18,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().TargetFileName",
+					"type": "Expression"
+				},
 				"folderPath": "RawZone/final",
 				"fileSystem": "adsladitipoc"
 			},
