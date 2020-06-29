@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "rawTotrusted",
+				"name": "dataflow1",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -16,13 +16,8 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "rawTotrusted",
-						"type": "DataFlowReference",
-						"datasetParameters": {
-							"tempsource": {
-								"destinationfilename": "lockup20200626.json"
-							}
-						}
+						"referenceName": "dataflow1",
+						"type": "DataFlowReference"
 					},
 					"compute": {
 						"coreCount": 8,
