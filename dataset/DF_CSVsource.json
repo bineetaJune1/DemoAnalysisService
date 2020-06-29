@@ -1,9 +1,14 @@
 {
-	"name": "testcsv",
+	"name": "DF_CSVsource",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Gen2DataLake",
 			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"sourceCsvfile": {
+				"type": "string"
+			}
 		},
 		"folder": {
 			"name": "DS_POC"
