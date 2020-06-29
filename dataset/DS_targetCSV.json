@@ -18,6 +18,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().targetfilename",
+					"type": "Expression"
+				},
 				"folderPath": "RawZone/final",
 				"fileSystem": "adsladitipoc"
 			},
