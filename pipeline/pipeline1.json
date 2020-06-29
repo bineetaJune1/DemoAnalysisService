@@ -17,21 +17,7 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "DF_tempTotarget",
-						"type": "DataFlowReference",
-						"datasetParameters": {
-							"source1": {
-								"sourceFileName": {
-									"value": "@pipeline().parameters.sourcefile",
-									"type": "Expression"
-								}
-							},
-							"sink1": {
-								"targetfilename": {
-									"value": "@concat(pipeline().parameters.targetfile,'.csv')",
-									"type": "Expression"
-								}
-							}
-						}
+						"type": "DataFlowReference"
 					},
 					"compute": {
 						"coreCount": 8,
@@ -42,9 +28,6 @@
 		],
 		"parameters": {
 			"sourcefile": {
-				"type": "string"
-			},
-			"targetfile": {
 				"type": "string"
 			}
 		},
