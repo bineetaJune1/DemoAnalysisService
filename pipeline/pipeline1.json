@@ -31,14 +31,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"rawsource": {
-				"type": "string"
-			},
-			"trustedDest": {
-				"type": "string"
-			}
-		},
 		"folder": {
 			"name": "Pipe_POC"
 		},
