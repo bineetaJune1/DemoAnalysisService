@@ -12,20 +12,20 @@
 						"referenceName": "JsonDataLake",
 						"type": "DatasetReference"
 					},
-					"name": "RawFile"
+					"name": "tempsource"
 				}
 			],
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "JsonTrusted",
+						"referenceName": "JsonDataLake",
 						"type": "DatasetReference"
 					},
-					"name": "Trustedfile"
+					"name": "target"
 				}
 			],
 			"transformations": [],
-			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tmoveFiles: ['lockup','Archive'],\n\twildcardPaths:['lockup']) ~> RawFile\nRawFile sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> Trustedfile"
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false) ~> tempsource\ntempsource sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> target"
 		}
 	}
 }
